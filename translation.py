@@ -1,12 +1,13 @@
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 def translate(input, src_lang, tgt_lang):
-    if src_lang is "sv":
-        model = AutoModelForSeq2SeqLM.from_pretrained("Helsinki-NLP/opus-mt-sv-en")
-        tokenizer = AutoTokenizer.from_pretrained("Helsinki-NLP/opus-mt-sv-en")
+    print(src_lang)
+    if src_lang == "sv":
+        model = AutoModelForSeq2SeqLM.from_pretrained("models/sv_en/sv_en_model")
+        tokenizer = AutoTokenizer.from_pretrained("models/sv_en/sv_en_tokenizer")
     else:
-        model = AutoModelForSeq2SeqLM.from_pretrained("Helsinki-NLP/opus-mt-en-sv")
-        tokenizer = AutoTokenizer.from_pretrained("Helsinki-NLP/opus-mt-en-sv")
+        model = AutoModelForSeq2SeqLM.from_pretrained("models/en_sv/en_sv_model")
+        tokenizer = AutoTokenizer.from_pretrained("models/en_sv/en_sv_tokenizer")
 
     if model is None:
         return "WRONG"

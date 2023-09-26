@@ -9,9 +9,9 @@ def home():
     return {"Translation API: Send a string, src_lang and tgt_lang"}
 
 @app.post("/translate/", response_model= Response)
-async def translate(request_data: Request):
+def translate_string(request_data: Request):
     try:
-        translation = await translate(request_data.input,
+        translation = translate(request_data.input,
                                 request_data.src_lang,
                                 request_data.tgt_lang)
         return Response(output=translation, score=0)
