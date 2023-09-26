@@ -7,6 +7,4 @@ class Request(BaseModel):
 
 class Response(BaseModel):
     output: str
-    src_lang: str
-    tgt_lang: str
     score: float
