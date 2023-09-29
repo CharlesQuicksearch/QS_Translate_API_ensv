@@ -1,0 +1,6 @@
+{
+  "en_to_sv_model_path": "models/en_sv/en_sv_model",
+  "en_to_sv_tokenizer_path": "models/en_sv/en_sv_tokenizer",
+  "sv_to_en_model_path": "models/sv_en/sv_en_model",
+  "sv_to_en_tokenizer_path": "models/sv_en/sv_en_tokenizer"
+}
